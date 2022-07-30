@@ -12,13 +12,13 @@ x = input("Masukkan judul film:\n")
 payload = {"s":x}
 cookies = {"_ga":"GA1.2.1944094503.1519133778", "a":"ccb5j7gmd7df2fifh9m87sf0t5459bj7", "_gid":"GA1.2.2108951550.1541772422", "_popfired":"5", "token_Qg4AAAAAAAAAVsIaMNocEjxUMzDNH0yOsXw0VIM":"A1vm2Vhb5wjMAQAgCah5Knqe3KSQ1/Ss2/ELeIixrl9nbeemrOuKIfs41YsBACC4bMvAJlUbH6CpnuHR1Mrm5DpvHtGIPIc09cj1c5HLLA=="}
 header = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
-cari = requests.get("https://pahe.in/?", params=payload, cookies=cookies, headers=header).text
+cari = requests.get("https://pahe.li/?", params=payload, cookies=cookies, headers=header).text
 soup = BeautifulSoup(cari, "html.parser")
 try:
     linkfilm = soup.find_all('h2')
     linkfilm = linkfilm[3]
     linkfilm = re.search(r'href="(.*)">', str(linkfilm)).group(1)
-    judul = re.search(r'pahe.in/(.*)/', linkfilm).group(1)
+    judul = re.search(r'pahe.li/(.*)/', linkfilm).group(1)
     print("\nMengambil film:",judul)
     buka = requests.get(linkfilm, cookies=cookies, headers=header).text
     soup2 = BeautifulSoup(buka, "html.parser")
