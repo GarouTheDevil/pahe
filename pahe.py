@@ -8,7 +8,7 @@ print(Message1)
 print(Message2)
 print('='*50)
 
-x = input("Masukkan judul film:\n")
+x = input("Enter movie title:\n")
 payload = {"s":x}
 cookies = {"_ga":"GA1.2.1944094503.1519133778", "a":"ccb5j7gmd7df2fifh9m87sf0t5459bj7", "_gid":"GA1.2.2108951550.1541772422", "_popfired":"5", "token_Qg4AAAAAAAAAVsIaMNocEjxUMzDNH0yOsXw0VIM":"A1vm2Vhb5wjMAQAgCah5Knqe3KSQ1/Ss2/ELeIixrl9nbeemrOuKIfs41YsBACC4bMvAJlUbH6CpnuHR1Mrm5DpvHtGIPIc09cj1c5HLLA=="}
 header = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
@@ -42,4 +42,4 @@ try:
         except:
             pass
 except:
-    print("Film tidak ditemukan")
+    print("Movies not found")
