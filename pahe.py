@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-Message1 = "Pahe.in Download Link Grabber"
+Message1 = "Pahe.li Download Link Grabber"
 Message2 = "https://github.com/lazuardyk"
 print('='*50)
 print(Message1)
