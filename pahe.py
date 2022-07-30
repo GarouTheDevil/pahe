@@ -19,7 +19,7 @@ try:
     linkfilm = linkfilm[3]
     linkfilm = re.search(r'href="(.*)">', str(linkfilm)).group(1)
     judul = re.search(r'pahe.li/(.*)/', linkfilm).group(1)
-    print("\nMengambil film:",judul)
+    print("\nTake a movie:",judul)
     buka = requests.get(linkfilm, cookies=cookies, headers=header).text
     soup2 = BeautifulSoup(buka, "html.parser")
     linkredir = soup2.find('div', class_="box-inner-block")
